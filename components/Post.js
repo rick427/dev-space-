@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import CategoryLabel from "./CategoryLabel";
 
 export default function Post({post}) {
     return (
@@ -16,7 +17,7 @@ export default function Post({post}) {
                 <span className="font-light text-gray-600">
                     {post.frontMatter.date}
                 </span>
-                <div>{post.frontMatter.category}</div>
+                <CategoryLabel>{post.frontMatter.category}</CategoryLabel>
             </div>
 
             <div className="mt-2">
